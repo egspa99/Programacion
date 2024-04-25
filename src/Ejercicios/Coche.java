@@ -1,12 +1,16 @@
 package Ejercicios;
 
-public class Coche {
+public class Coche extends Vehiculos{
 
-	private int puertas;
-
-	public Coche(int puertas) {
-		super();
-		this.puertas = puertas;
+	private int numeroPuertas;
+	 
+	public Coche(String matricula, int numPuertas) {
+	    super(matricula);
+	    numeroPuertas = numPuertas;
+	}
+	 
+	public int totalPuertas() {
+	    return numeroPuertas;
 	}
 	
 

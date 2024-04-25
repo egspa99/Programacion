@@ -8,44 +8,26 @@ public class Vehiculos {
 
 	private String matricula;
 	private double velocidad;
-
+	 
 	public Vehiculos(String matricula) {
-		this.matricula = matricula;
-		this.velocidad = 0;
+	    this.matricula = matricula;
+	    this.velocidad = 0;
 	}
-
-	public String getMatricula() {
-		return matricula;
+	 
+	public double getVelocidad() {
+	    return velocidad;
 	}
-
-	public void setMatricula(String matricula) {
-		this.matricula = matricula;
-	}
-
+	 
 	public void setVelocidad(double velocidad) {
-		this.velocidad = velocidad;
+	    this.velocidad = velocidad;
 	}
-	public void acelerar(double cantidad){
-		velocidad+=cantidad;
+	 
+	public void acelerar(double cantidad) throws DemasiadoRapidoException {
+	    velocidad += cantidad;
 	}
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-
-		System.out.println("Introduzca matricula vehiculo:");
-		String matricula = sc.nextLine();
-		
-
-		System.out.println("Introduzca velocidad a la que circula:");
-		double velocidad = sc.nextDouble();
-		
-
-		System.out.println("Introduzca numero de puertas del vehiculo:");
-		int puertas = sc.nextInt();
-		
-
-		System.out.println(coche.toString());
+	 
+	public String toString() {
+	    return "El vehículo con matrícula " + matricula + " va a velocidad de " + velocidad + "km/h";   
 	}
 
 }
