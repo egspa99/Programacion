@@ -2,7 +2,12 @@ package Ejercicios;
 
 public class Camion {
 
-	String matricula;
-	double velocidad;
-	boolean remolque = false;
+	private boolean remolque;
+
+	public Camion(boolean remolque) {
+		super();
+		this.remolque = remolque;
+	}
+	
+	
 }
